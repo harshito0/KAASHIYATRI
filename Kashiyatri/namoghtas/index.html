@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghat and Ganga Aarti</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            perspective: 1000px; /* Enables 3D effect */
+        }
+
+        .card-inner {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden; /* Hides the back side when flipping */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-front {
+            background: #fff;
+        }
+
+        .card-back {
+            background: #e67e22;
+            color: #fff;
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card h3 {
+            margin: 10px;
+            color: #e74c3c;
+            font-size: 1.2em;
+        }
+
+        .card p {
+            margin: 10px;
+            color: #555;
+            font-size: 0.9em;
+        }
+
+        .card .category {
+            font-size: 0.8em;
+            color: #999;
+            margin: 10px;
+        }
+
+        .read-more {
+            display: block;
+            text-align: center;
+            margin: 10px;
+            padding: 10px;
+            background-color: #e67e22;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        header img {
+            width: 150px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .read-more:hover {
+            background-color: #d35400;
+        }
+    </style>
+</head>
+<body><header> <img src="logo.png" alt="ghat Logo">
+    <h1 style="text-align: center; padding: 20px;">GHATS</h1>
+</header>
+    <div class="container">
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.oVho7PqV_yOqeWkwsmtBTwHaEc&pid=Api&P=0&h=220" alt="Assi Ghat">
+                    <h3>ASSI GHAT</h3>
+                    <p class="category">Category &gt; Ghat</p>
+                    <p>Assi Ghat is the southernmost ghat in Varanasi. It is one of the biggest ghats of Varanasi and most popular one.</p>
+                </div>
+                <div class="card-back">
+                    <h3>More About Assi Ghat</h3>
+                    <p>Assi Ghat is a must-visit destination for its historical and cultural significance in Varanasi.</p>
+                    <a href="#" class="read-more">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.Pff64NeQ-y7oPCgrTbnrjAHaEK&pid=Api&P=0&h=220" alt="Dasaswamedh Ghat">
+                    <h3>DASASWAMEDH GHAT</h3>
+                    <p class="category">Category &gt; Ghat</p>
+                    <p>Dashashwamedh is a famous place on the banks of the Ganges in Varanasi, with religious and historical importance.</p>
+                </div>
+                <div class="card-back">
+                    <h3>More About Dasaswamedh</h3>
+                    <p>Experience the grandeur of this ghat and its mesmerizing evening Aarti.</p>
+                    <a href="#" class="read-more">Explore</a>
+                </div>
+            </div>
+        </div>
+        <!-- card 4 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://cdn.getyourguide.com/img/tour/507d9e404184eab54fc7b3c583cac6c5384d5128eb651a66e03174323fb77d15.jpeg/145.jpg" alt="manikarnika ghat">
+                    <h3>Manikarnika Ghat</h3>
+                    <p class="category">Category &gt; Ghat</p>
+                    <p>The Manikarnika shrine is an important place of worship for Shaktism sect of Hinduism. It is near to the Kashi Vishwanath Temple</p>
+                </div>
+                <div class="card-back">
+                    <h3>More About Manikarnika Ghat</h3>
+                    <p>The Manikarnika shrine is an important place of worship for Shaktism sect of Hinduism. It is near to the Kashi Vishwanath Temple. .</p>
+                    <a href="#" class="read-more">Explore</a>
+                </div>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.GeT-k_YAlzgcVV17LukaOAHaE8&pid=Api&P=0&h=220" alt="Ganga Aarti">
+                    <h3>GANGA AARTI</h3>
+                    <p class="category">Category &gt; gangaarti</p>
+                    <p>Grand Aarti of Ganga takes place at Dashashwamedh Ghat in Varanasi, in the evening on the banks of Ganga.</p>
+                </div>
+                <div class="card-back">
+                    <h3>More About Ganga Aarti</h3>
+                    <p>Don't miss the spiritual and divine experience of the Ganga Aarti.</p>
+                    <a href="#" class="read-more">Explore</a>
+                </div>
+            </div>
+        </div>
+        <!-- card 4 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src=https://tse1.mm.bing.net/th?id=OIP.yaxE6Y1dCedkSF8krZy0mQHaEK&pid=Api&P=0&h=220" alt="Namo ghat">
+                    <h3>Namo ghat Ghat</h3>
+                    <p class="category">Category &gt; Ghat</p>
+                    <p>The splendid architecture of the Namo Ghat is the answer to your question of adding Namo Ghat to your itinerary is a must.</p>
+                </div>
+                <div class="card-back">
+                    <h3>More About Namo Ghat</h3>
+                    <p>The Manikarnika shrine is an important place of worship for Shaktism sect of Hinduism. It is near to the Kashi Vishwanath Temple. .</p>
+                    <a href="#" class="read-more">Explore</a>
+                </div>
+            </div>
+    </div>
+</body>
+</html>

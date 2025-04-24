@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Title -->
+  <title> KAASHIYATRI </title>
+  <!-- External CSS -->
+  <link rel="stylesheet" href="./style.css">
+  <!-- JavaScript File -->
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" text="text/CSS"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" text="text/CSS"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<style>
+.data-item {
+  background: #222;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s ease-in forwards;
+}
+
+.data-item:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.data-item:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.data-item:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+.data-item:nth-child(4) {
+  animation-delay: 1.0s;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+
+<body onload="myFunction()">
+  <a href="#header" id="back-top-div" class="back-top-wrap">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+  <header id="header">
+    
+    <!-- <div class="language-selector">
+      <label for="language">Language:</label>
+      <select id="language" name="language" onchange="changeLanguage(this.value)">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="fr">Français</option>
+          <option value="de">Deutsch</option>
+           Add more languages as needed -->
+      </select>
+  </div> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KASHIYATRI</title>
+  <style>
+    /* General Reset */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Header Section */
+    header {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .header-slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .header-slider .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      position: relative;
+      text-align: center;
+    }
+
+    .header-slider .slide img {
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+    }
+
+    .header-slider .slide-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      color: white;
+    }
+
+    .header-slider .slide-content h2 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .header-slider .slide-content p {
+      font-size: 1.5rem;
+    }
+
+    /* Navigation Dots */
+    .dots {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+    }
+
+    .dots span {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #fff;
+      opacity: 0.5;
+      cursor: pointer;
+    }
+
+    .dots span.active {
+      background: #c24112;
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header-slider">
+      <div class="slide">
+        <img src="dashashwamedh-ghat.jpg" alt="Slide 1">
+        <div class="slide-content">
+          <h2>Welcome to KASHIYATRI</h2>
+          <p>Explore the Spiritual Capital of India</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="ghats5.jpg" alt="Slide 1">
+        <div class="slide-content">
+          <h2>Welcome to KASHIYATRI</h2>
+          <p>Explore the Spiritual Capital of India</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="ganga-aarti.jpg" alt="Slide 2">
+        <div class="slide-content">
+          <h2>Experience the Ghats</h2>
+          <p>Discover the beauty of Varanasi’s iconic ghats</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="home3.jpg" alt="Slide 3">
+        <div class="slide-content">
+          <h2>Spiritual Awakening</h2>
+          <p>Immerse yourself in the cultural essence of India</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="namo ghats.jpeg" alt="Slide 4">
+        <div class="slide-content">
+          <h2>Guided Tours</h2>
+          <p>Enjoy tailored tours to explore the best of Kashi</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="station.jpg" alt="Slide 5">
+        <div class="slide-content">
+          <h2>Memories for a Lifetime</h2>
+          <p>Create unforgettable moments in the holy city</p>
+        </div>
+      </div>
+    </div>
+    <div class="dots"></div>
+  </header>
+
+  <script>
+    // JavaScript for Horizontal Slider
+    const slides = document.querySelectorAll(".slide");
+    const slider = document.querySelector(".header-slider");
+    const dotsContainer = document.querySelector(".dots");
+    let currentIndex = 0;
+
+    // Create dots for each slide
+    slides.forEach((_, index) => {
+      const dot = document.createElement("span");
+      dot.classList.add("dot");
+      if (index === 0) dot.classList.add("active");
+      dot.addEventListener("click", () => goToSlide(index));
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll(".dots span");
+
+    function goToSlide(index) {
+      slider.style.transform = `translateX(-${index * 100}%)`;
+      dots[currentIndex].classList.remove("active");
+      dots[index].classList.add("active");
+      currentIndex = index;
+    }
+    
+    // function changeLanguage(language) {
+    //         alert(`Language changed to: ${language}`);
+    //         // Implement the language change logic here
+    //         // For example, redirect to a language-specific page or dynamically load translations
+    //     }
+    function nextSlide() {
+      const nextIndex = (currentIndex + 1) % slides.length;
+      goToSlide(nextIndex);
+    }
+
+    // Auto loop
+    setInterval(nextSlide, 4000);
+  </script>
+</body>
+
+</html>
+
+    <nav class="nav" id="nav">
+      
+      <div class="navbrand"></div>
+      <div class="nav-links" id="navLinks">
+        <ul class="links" id="navmenu">
+          <li ><a href="#">HOME</a></li>
+          <li class="dropdown">
+            <a href="#">  SERVICES<i class="fa fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#ghats">GHATS</a></li>
+              <li><a href="#tours">TOURS</a></li>
+              <li><a href="#spiritual">SPIRITUAL GUIDANCE</a></li>
+              <li><a href="#custom">CUSTOM PACKAGES</a></li>
+              <li><a href="#custom"></a></li>
+              <li><a href="#custom"></a></li>
+              <li><a href="#custom"></a></li>
+              <li><a href="#custom"></a></li>
+            </ul>
+          </li>
+          <li><a href="#about">ABOUT</a></li>
+          <!-- <li><a href="#services">SERVICES </a></li> -->
+          <li><a href="html/contact.html">CONTACT US </a></li>
+          <div class="language-selector">
+            <label for="language">Language:</label>
+            <select id="language" name="language" onchange="changeLanguage(this.value)">
+                <option value="en">English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <option value="hi">हिन्दी</option>
+                <!-- Add more languages as needed -->
+            </select>
+        </div>
+        </ul>
+      </div>
+      <button class="login-button"> <a href="/login form/login.html">SIGN UP</a></button>
+      <div class="hamburger" id="ham">
+        <i class="cancel fa-solid fa-xmark"></i>
+
+        <svg class="burger" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
+          height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z">
+          </path>
+        </svg>
+      </div>
+    </nav>
+    <div class="menu" id="menu">
+      <ul class="menu-link">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="html/contact.html">CONTACT US </a></li>
+      </ul>
+    </div>
+  <section id="services">
+    <h1>ATTRACTIONS</h1>
+    <div data-aos="zoom-in" data-aos-duration="800" class="container">
+      <div class="responsive audio">
+        <div class="round-image">
+          <img src="kashi.jpg" alt="audio" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>GHATS</h2>
+          <p>
+            Kashi Ghats, lining the sacred Ganga River in Varanasi, showcase spiritual vibrancy, ancient rituals,
+             and breathtaking views. From Assi to Dashashwamedh, they symbolize India's deep cultural and religious heritage.
+          </p>
+          <a href="/namoghtas/index.html">
+            Read more
+          </a>
+        </div>
+      </div>
+      <div data-aos="zoom-in" data-aos-duration="800" class="responsive reading">
+        <div class="round-image">
+          <img src="https://tse4.mm.bing.net/th?id=OIP.mtINIaVlVBuTm1MnP_6XFAHaFj&pid=Api&P=0&h=220" alt="read" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>SARNATH</h2>
+          <p>
+            Sarnath, located near Varanasi, is a revered Buddhist pilgrimage site where Lord Buddha delivered his first sermon.
+             It is home to iconic landmarks like the Dhamek Stupa, Ashoka Pillar, and Sarnath Museum, showcasing India's rich spiritual heritage.
+            
+          </p>
+          <a href="/sarnath/index.html">
+            Read more
+          </a>
+        </div>
+      </div>
+      <div data-aos="zoom-in" data-aos-duration="800" class="responsive yoga">
+        <div class="round-image">
+          <img src="https://tse2.mm.bing.net/th?id=OIP.AFnkKROktuRSSYB3nZPD1AHaEK&pid=Api&P=0&h=220" height="100px" alt="yoga" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2> SWARVED MAHAMANDIR</h2>
+          <p>
+            Swarved Mahamandir is a charitable meditation centre built in Varanasi and inaugurated by 
+            Indian Prime Minister Narendra Modi and with its seven storey claims to be the biggest meditation centre in the World’
+          </p>
+          <a href="/sarwer mandir/index.html">
+            Read more
+          </a>
+        </div>
+      </div>
+
+      <div data-aos="zoom-in" data-aos-duration="800" class="responsive talk">
+        <div class="round-image">
+          <img src="https://tse1.mm.bing.net/th?id=OIP.k4wBgvBzWGqzpbN0xKa7EwHaEK&pid=Api&P=0&h=220" loading="lazy" alt="talking" />
+        </div>
+        <div class="description">
+          <h2>BHU</h2>
+          <p>
+            The Banaras Hindu University was jointly established by Madan Mohan Malaviya,
+             Maharaja Rameshwar Singh of Darbhanga Raj and Prabhu Narayan Singh
+             and Aditya Narayan Singh of Narayan dynasty, while the university is the brainchild of Malviya
+          </p>
+          <a href="http://127.0.0.1:5500/BHU/index.html">
+            Read more
+          </a>
+        </div>
+      </div>
+      <div data-aos="zoom-in" data-aos-duration="800" class="responsive doctor">
+        <div class="round-image">
+          <img src="viswnath-temple.jpg" alt="doctor" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>viswnath-temple</h2>
+          <p>
+            Varanasi, the city full of dazzling charm doesn’t need any introduction.
+             This place is the best if you value calmness and inner peace.
+             Everyone has heard about the heaven but if you want to experience it on the Earth then you must visit Varanasi.
+          </p>
+          <a   href="">
+            Read more
+          </a>
+        </div>
+      </div>
+      
+      <div class="responsive special">
+        <div class="round-image">
+          <img src="kashi.jpg" alt="special" loading="lazy" />
+        </div>
+        <div class="description">
+          <h2>ASSI GHATS</h2>
+          <p>
+            Assi Ghat is the southernmost ghat in Varanasi.[1] To most visitors to Varanasi, 
+            it is known for being a place where long-term foreign students, researchers, and tourists live.
+          </p>
+          <a href="" target="_blank">
+            Read more
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="data-section" style="background-color: black; color:  #c24112; padding: 50px 20px;">
+    <div class="container">
+      <h1 style="text-align: center; margin-bottom: 30px; font-size: 45px;">Data Insights</h1>
+      <div class="data-items" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+        <div class="data-item">
+          <h2>1,200+</h2>
+          <p>Visitors Every Month</p>
+        </div>
+        <div class="data-item">
+          <h2>500+</h2>
+          <p>Happy Travelers</p>
+        </div>
+        <div class="data-item">
+          <h2>100+</h2>
+          <p>Ghats Explored</p>
+        </div>
+        <div class="data-item">
+          <h2>50+</h2>
+          <p>Custom Tours Offered</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="upcoming-events" style="background-color: #272626; padding: 50px 80px;">
+    <div class="container">
+      <h1 style="text-align:center; margin-bottom: 30px; color: #c24112; font-size: 35px;">UPCOMING EVENTS</h1>
+      <div class="events-wrapper" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+        <!-- Event Card 1 -->
+        <div class="event-card">
+          <div class="event-image">
+            <img src="ganga-aarti.jpg" alt="Ganga Aarti Special">
+          </div>
+          <div class="event-date">
+            <h2>25</h2>
+            <p>Jan</p>
+          </div>
+          <div class="event-content">
+            <h3>Ganga Aarti Special</h3>
+            <p>Join the mesmerizing evening Ganga Aarti ceremony at Dashashwamedh Ghat.</p>
+          </div>
+        </div>
+        <!-- Event Card 2 -->
+        <div class="event-card">
+          <div class="event-image">
+            <img src="walk.jpg" alt="Heritage Walk">
+          </div>
+          <div class="event-date">
+            <h2>14</h2>
+            <p>Feb</p>
+          </div>
+          <div class="event-content">
+            <h3>Heritage Walk</h3>
+            <p>Explore the hidden gems of Varanasi on our guided heritage walk.</p>
+          </div>
+        </div>
+        <!-- Event Card 3 -->
+        <div class="event-card">
+          <div class="event-image">
+            <img src="holi.jpg" alt="Holi Celebration">
+          </div>
+          <div class="event-date">
+            <h2>10</h2>
+            <p>Mar</p>
+          </div>
+          <div class="event-content">
+            <h3>Holi Celebration</h3>
+            <p>Experience the vibrant Holi celebrations at Assi Ghat.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- footer start -->
+  <footer>
+    <div class="footer-container">
+      <!--logo and info column-->
+      <div class="col">
+        <!--logo insert-->
+        <a href="#" style="text-decoration: none;" class="footercontent">
+          <h2 class="footerheading">KASHIYATRI</h2>
+          <p class="footerpara">kashiyatri@travel</p>
+        </a>
+      </div>
+
+      <!--ADDRESS COLUMN-->
+
+      <div class="footer-side-col">
+        <div class="col">
+          <h3>
+            ADDRESS
+            <div class="underline"><span></span></div>
+          </h3>
+          <p>varanasi,Uttar Pradesh</p>
+          <p class="email-id"><a href="kashiyatri@gmail.com">kashiyatri@gmail.com</a></p>
+        </div>
+        <!--HOME COLUMN-->
+        <div class="col">
+          <h3>HOME</h3>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li>
+              <a href="#"></a>
+            </li>
+            <li>
+              <a href="https://github.com/illunise/hackathon-project">Contribute</a>
+            </li>
+            <li>
+              <a href="#"></a>
+            </li>
+          </ul>
+        </div>
+        <!--OUR SERVICES COLUMN-->
+        <div class="col">
+          <h3>
+            SERVICES
+            <div class="underline"><span></span></div>
+          </h3>
+          <ul>
+            <li>
+              <a href=""></a>
+            </li>
+            </li>
+              <a href=""></a>
+            </li>
+            <li>
+              <a href=""></a>
+            </li>
+            <li>
+              <a href=""></a>
+            </li>
+            <li>
+              <a href=""></a>
+            </li>
+            <li>
+              <a href=""></a>
+            </li>
+           
+          </ul>
+        </div>
+        <!--CONTACTS COLUMN-->
+        <div class="col">
+          <h3>
+            CONTACTS
+            <div class="underline"><span></span></div>
+          </h3>
+          <div class="social-menu">
+            <ul>
+              <a href="https://twitter.com/il" target="_blank">
+                <li id="social-twitter"><i class="fab fa-2x fa-twitter"></i></li>
+              </a>
+              <a href="https://github.com/ill" target="_blank">
+                <li id="social-github"><i class="fab fa-2x fa-github"></i></li>
+              </a>
+              <a href="https://www.linkedin.comise" target="_blank">
+                <li id="social-linkedin"><i class="fab fa-2x fa-linkedin-in"></i></li>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+
+    let preloader = document.querySelector(".loading-wrapper");
+    function myFunction() {
+      preloader.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    let navbar = document.querySelector("#nav");
+    let navmenu = document.querySelector("#navmenu");
+
+    window.onscroll = function () {
+      if (window.pageYOffset >= navmenu.offsetTop) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    };
+  // Translation dictionary
+  const translations = {
+      hi: {
+        title: "काशी यात्री में आपका स्वागत है",
+        subtitle: "भारत की आध्यात्मिक राजधानी का अन्वेषण करें",
+        "services-title": "हमारी सेवाएं",
+        "service-ghats": "घाटों का अनुभव करें",
+        "service-tours": "मार्गदर्शित पर्यटन",
+        "service-spiritual": "आध्यात्मिक जागृति"
+      },
+      en: {
+        title: "Welcome to KASHIYATRI",
+        subtitle: "Explore the Spiritual Capital of India",
+        "services-title": "Our Services",
+        "service-ghats": "Experience the Ghats",
+        "service-tours": "Guided Tours",
+        "service-spiritual": "Spiritual Awakening"
+      }
+    };
+
+    // Function to change language
+    function changeLanguage(lang) {
+      const elements = document.querySelectorAll("[id]");
+      elements.forEach((el) => {
+        const key = el.id;
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+    }
+
+    // Event listener for language selector
+    document.getElementById("language").addEventListener("change", (event) => {
+      const selectedLanguage = event.target.value;
+      changeLanguage(selectedLanguage);
+    });
+    window.onscroll = () => {
+      if (window.scrollY > 100) {
+        navbar.classList.add('nav-active');
+      } else {
+        navbar.classList.remove('nav-active');
+      }
+    };
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./serviceworker.js')
+          .then((reg) => console.log('Success', reg.scope))
+          .catch((err) => console.log('Error', err))
+      })
+    }
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="index.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

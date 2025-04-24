@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarnath</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            background-color: #f7f5f2;
+            color: #ec8b15;
+            padding: 10px 20px;
+        }
+
+        header img {
+            width: 150px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            perspective: 1000px;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-front {
+            background: #fff;
+        }
+
+        .card-back {
+            background: #e3790f;
+            color: #fff;
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card h3 {
+            margin: 10px;
+            color: #e3790f;
+            font-size: 1.2em;
+        }
+
+        .card p {
+            margin: 10px;
+            color: #555;
+            font-size: 0.9em;
+        }
+
+        .card .category {
+            font-size: 0.8em;
+            color: #999;
+            margin: 10px;
+        }
+
+        .read-more {
+            display: block;
+            text-align: center;
+            margin: 10px;
+            padding: 10px;
+            background-color: #e3790f;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .read-more:hover {
+            background-color: #d36608;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Sarnath Logo">
+        <h1><center>Sarnath</center></h1>
+    </header>
+    <div class="container">
+        <!-- Dhamek Stupa -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.BwlQNYzZP6KPoh9JdY7ShQHaEo&pid=Api&P=0&h=220" alt="Dhamek Stupa">
+                    <h3>DHAMEK STUPA</h3>
+                    <p class="category">Category &gt; Historical Site</p>
+                    <p>Built in 500 CE, this stupa marks the spot where Buddha gave his first sermon.</p>
+                </div>
+                <div class="card-back">
+                    <h3>More About Dhamek Stupa</h3>
+                    <p>An iconic structure representing Buddhism's roots and significance in Sarnath.</p>
+                    <a href="#" class="read-more">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ashoka Pillar -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.GH8HWVLX3m3FKf9yvwxkZwHaFj&pid=Api&P=0&h=220" alt="Ashoka Pillar">
+                    <h3>ASHOKA PILLAR</h3>
+                    <p class="category">Category &gt; Monument</p>
+                    <p>Erected by Emperor Ashoka, it symbolizes peace and features the national emblem of India.</p>
+                </div>
+                <div class="card-back">
+                    <h3>More About Ashoka Pillar</h3>
+                    <p>A historic structure showcasing exquisite Mauryan craftsmanship and ideals of dharma.</p>
+                    <a href="#" class="read-more">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sarnath Museum -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.-zfPwXyvukV3LTzCE4vcXwHaEK&pid=Api&P=0&h=220" alt="Sarnath Museum">
+                    <h3>SARNATH MUSEUM</h3>
+                    <p class="category">Category &gt; Museum</p>
+                    <p>Home to ancient artifacts, including the Lion Capital, India's national emblem.</p>
+                </div>
+                <div class="card-back">
+                    <h3>More About Sarnath Museum</h3>
+                    <p>Explore a treasure trove of Buddhist relics and artwork from the Mauryan era.</p>
+                    <a href="#" class="read-more">Explore</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
