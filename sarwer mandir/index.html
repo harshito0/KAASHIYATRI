@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swarved Mahamandir</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            perspective: 1000px; /* Enables 3D effect */
+        }
+
+        .card-inner {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden; /* Hides the back side when flipping */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-front {
+            background: #fff;
+        }
+
+        .card-back {
+            background: #e67e22;
+            color: #fff;
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card h3 {
+            margin: 10px;
+            color: #e74c3c;
+            font-size: 1.2em;
+        }
+
+        .card p {
+            margin: 10px;
+            color: #555;
+            font-size: 0.9em;
+        }
+
+        .card .category {
+            font-size: 0.8em;
+            color: #999;
+            margin: 10px;
+        }
+
+        .read-more {
+            display: block;
+            text-align: center;
+            margin: 10px;
+            padding: 10px;
+            background-color: #e67e22;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        header img {
+            width: 150px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .read-more:hover {
+            background-color: #d35400;
+        }
+    </style>
+</head>
+<body><header> <img src="logo.png" alt="ghat Logo">
+    <h1 style="text-align: center; padding: 20px;">Swarved Mahamandir</h1>
+</header>
+    <div class="container">
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.LTBsZk8C6p_6mSxwNahEsQHaEK&pid=Api&P=0&h=220" alt="Assi Ghat">
+                    <h3>Swarved</h3>
+                    <p class="category">Category &gt; Ghat</p>
+                    <p>Assi Ghat is the southernmost ghat in Varanasi. It is one of the biggest ghats of Varanasi and most popular one.</p>
+                </div>
+                <div class="card-back">
+                    <h3>More About Swarved  </h3>
+                    <p>Swarved Mahamandir was built with an estimated cost of Rs 6000 crore[1] 
+                        and inaugurated by Prime Minister of India Narendra Modi on 17 December 2023.</p>
+                    <a href="#" class="read-more">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.KSU9z22ju76995SujeT0AwHaEI&pid=Api&P=0&h=220">
+                    <h3>Swarved</h3>
+                    <p class="category">Category &gt; Ghat</p>
+                    <p>Swarved Mahamandir is bulit in an area covering around 3,00,000
+                         square feet with a seating capacity of 20000 people.</p>
+                </div>
+                <div class="card-back">
+                    <h3>More About Dasaswamedh</h3>
+                    <p>Experience the grandeur of this ghat and its mesmerizing evening Aarti.</p>
+                    <a href="#" class="read-more">Explore</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

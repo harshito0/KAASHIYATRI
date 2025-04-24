@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Background Video -->
+    <div>
+        <video autoplay loop muted class="background-video">
+            <source src="background 2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Login Container -->
+    <div class="container">
+        <h2>Login</h2>
+        <form action="#">
+            <!-- Email Input -->
+            <div class="form-group">
+                <input type="email" id="email" required>
+                <label for="email">Email</label>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+
+            <!-- Password Input -->
+            <div class="form-group">
+                <input type="password" id="password" required>
+                <label for="password">Password</label>
+                <i class="fa-solid fa-lock"></i>
+            </div>
+
+            <!-- Remember Me and Forget Password -->
+            <p>
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember Me</label>
+                <a href="#">Forget Password?</a>
+            </p>
+
+            <!-- Login Button -->
+            <input id="btn" type="submit" value="Login">
+
+            <!-- Register Link -->
+            <p>
+                Don't have an account? <a href="#">Register</a>
+            </p>
+        </form>
+
+        <!-- OR Divider -->
+        <div class="or-divider">
+            <span>OR</span>
+        </div>
+
+        <!-- Social Login Buttons -->
+        <div class="social-login">
+            <button id="google-login" type="button">
+                <i class="fab fa-google"></i> Sign Up with Google
+            </button>
+            <button id="facebook-login" type="button">
+                <i class="fab fa-facebook"></i> Sign Up with Facebook
+            </button>
+        </div>
+    </div>
+</body>
+</html>
